@@ -267,17 +267,17 @@ void Graphical::displayBooksWithFilters(QWidget *parent, QList<LibrarySystem::Bo
     {
         bookWindow = new QWidget(nullptr, Qt::Window);
         bookWindow->setWindowTitle("Filtered Books");
-        bookWindow->resize(1150, 600);
+        bookWindow->resize(1200, 600);
         bookWindow->setAttribute(Qt::WA_DeleteOnClose);
 
         QVBoxLayout *layout = new QVBoxLayout(bookWindow);
 
         bookTable = new QTableWidget(bookWindow);
         bookTable->setObjectName("BookTable");
-        bookTable->setColumnCount(15);
+        bookTable->setColumnCount(16);
         bookTable->setHorizontalHeaderLabels({"Title", "Author",
                                               "Publisher", "Year", "Edition", "ISBN", "Volume", "Page Count",
-                                              "Series Info", "Language", "DDC", "Additional Info", "Borrowed", "Borrowed By", "UID"});
+                                              "Series Info", "Language", "DDC", "Additional Info", "Borrowed", "Borrowed By", "UID", "ID"});
         bookTable->setShowGrid(true);
         bookTable->horizontalHeader()->setStretchLastSection(true);
         layout->addWidget(bookTable);
@@ -328,6 +328,7 @@ void Graphical::displayBooksWithFilters(QWidget *parent, QList<LibrarySystem::Bo
         table->setItem(row, 12, new QTableWidgetItem(book.isBorrowed ? "Yes" : "No"));
         table->setItem(row, 13, new QTableWidgetItem(book.borrowedBy.isEmpty() ? "-" : book.borrowedBy));
         table->setItem(row, 14, new QTableWidgetItem(book.uid.isEmpty() ? "-" : book.uid));
+        table->setItem(row, 15, new QTableWidgetItem(book.id));
     }
 
     bookWindow->show();
