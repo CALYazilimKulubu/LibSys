@@ -1,7 +1,7 @@
 # LibSys (Library Management System Software)
 
 LibSys, LibSys Installer, LibSys Updater
-© 2025 – Habil Eren Türker
+© 2026 – Habil Eren Türker
 
 ## About the Project
 
