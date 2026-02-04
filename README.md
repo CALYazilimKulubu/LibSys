@@ -26,7 +26,7 @@ LibSys is an open-source library management system written in C++ that handles b
 
 * Programming Language: C++
 * Build system: CMake + Makefile
-* License: GNU AGPL v3.0 ([License](https://www.gnu.org/licenses/agpl-3.0.en.html))
+* License: GNU GPL v3.0 ([License](https://www.gnu.org/licenses/gpl-3.0.en.html))
 
 ## Installation
 
@@ -100,7 +100,7 @@ Manual testing scenarios:
 
 ## License
 
-This project is licensed under GNU AGPL v3.0. See the `LICENSE` file for details. ([GitHub link](LICENSE))
+This project is licensed under GNU GPL v3.0. See the `LICENSE` file for details. ([GitHub link](LICENSE))
 
 This project uses Qt 6.10.0 which is licensed under GNU LGPL v3.0. See ([Qt License](https://doc.qt.io/qt-6/lgpl.html)) for more information.
 
