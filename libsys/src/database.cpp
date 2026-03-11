@@ -491,7 +491,13 @@ bool Database::updateBook(QWidget *parent, const QString &bookTitle, const QStri
                           const QString &seriesInformation, const QString &language,
                           const QString &DDC, const QString &additionalInfo, const QString &uid)
 {
+    /*
     if (ISBN.trimmed().isEmpty() || bookTitle.trimmed().isEmpty())
+    {
+        return false;
+    }
+    */
+    if (bookTitle.trimmed().isEmpty())
     {
         return false;
     }
@@ -502,8 +508,9 @@ bool Database::updateBook(QWidget *parent, const QString &bookTitle, const QStri
     }
 
     QSqlQuery checkQuery(m_db);
-    checkQuery.prepare("SELECT COUNT(*) FROM books WHERE isbn = :isbn AND title = :title");
-    checkQuery.bindValue(":isbn", ISBN);
+    // checkQuery.prepare("SELECT COUNT(*) FROM books WHERE isbn = :isbn OR title = :title");
+    // checkQuery.bindValue(":isbn", ISBN);
+    checkQuery.prepare("SELECT COUNT(*) FROM books WHERE title = :title");
     checkQuery.bindValue(":title", bookTitle);
     if (!checkQuery.exec() || !checkQuery.next() || checkQuery.value(0).toInt() == 0)
     {
@@ -567,6 +574,12 @@ bool Database::updateBook(QWidget *parent, const QString &bookTitle, const QStri
     {
         updates << "uid = :uid";
         binds[":uid"] = uid;
+    }
+    /* If ISBN is present in a book, it must be entered too. If not, LibSys can change info without needing ISBN. */
+    if (!ISBN.trimmed().isEmpty())
+    {
+        updates << "isbn = :isbn";
+        binds[":isbn"] = ISBN;
     }
 
     if (updates.isEmpty())

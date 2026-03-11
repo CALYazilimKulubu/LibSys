@@ -4,14 +4,14 @@
             "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Qt/6.10.0/mingw_64/include",
-                "C:/Qt/6.10.0/mingw_64/include/QtWidgets",
-                "C:/Qt/6.10.0/mingw_64/include/QtGui",
-                "C:/Qt/6.10.0/mingw_64/include/QtCore",
-                "C:/Qt/6.10.0/mingw_64/include/QtNetwork"
+                "C:/Qt/6.10.2/mingw_64/include",
+                "C:/Qt/6.10.2/mingw_64/include/QtWidgets",
+                "C:/Qt/6.10.2/mingw_64/include/QtGui",
+                "C:/Qt/6.10.2/mingw_64/include/QtCore",
+                "C:/Qt/6.10.2/mingw_64/include/QtNetwork"
             ],
             "defines": [],
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+            "compilerPath": "E:/msys64/mingw64/bin/g++.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"
