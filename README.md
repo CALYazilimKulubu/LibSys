@@ -40,7 +40,7 @@ You can find more information here:
 
 Also you must change all CMakeLists.txt files' 
 ```bash
-set(CMAKE_PREFIX_PATH "C:/Qt/6.10.0/mingw_64")
+set(CMAKE_PREFIX_PATH "C:/Qt/6.10.2/mingw_64")
 ```
 part with the path you have Qt installed.
 
@@ -102,7 +102,7 @@ Manual testing scenarios:
 
 This project is licensed under GNU GPL v3.0. See the `LICENSE` file for details. ([GitHub link](LICENSE))
 
-This project uses Qt 6.10.0 which is licensed under GNU LGPL v3.0. See ([Qt License](https://doc.qt.io/qt-6/lgpl.html)) for more information.
+This project uses Qt 6.10.2 which is licensed under GNU LGPL v3.0. See ([Qt License](https://doc.qt.io/qt-6/lgpl.html)) for more information.
 
 This project uses serialib library which is licensed under MIT License. See serialib project ([serialib link](https://github.com/imabot2/serialib)).
 
