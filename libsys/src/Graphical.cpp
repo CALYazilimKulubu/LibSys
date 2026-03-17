@@ -348,16 +348,19 @@ bool Graphical::reportLostBookGraphical(QWidget *parent)
     QInputDialog inputDialog(parent);
     inputDialog.setWindowTitle("Report Lost Book");
     inputDialog.setLabelText("Enter Book ID:");
-    inputDialog.setInputMode(QInputDialog::IntInput);
+    inputDialog.setInputMode(QInputDialog::TextInput);  // Text input
     inputDialog.setModal(true);
 
     int bookId = 0;
     if (inputDialog.exec() == QDialog::Accepted)
     {
-        bookId = inputDialog.intValue();
-        if (bookId <= 0)
+        QString input = inputDialog.textValue().trimmed();
+        bool ok = false;
+        bookId = input.toInt(&ok);
+
+        if (!ok || bookId <= 0)
         {
-            showMessage(parent, "Input Error", "Book ID must be valid.", true);
+            showMessage(parent, "Input Error", "Book ID must be a valid positive number.", true);
             return false;
         }
     }

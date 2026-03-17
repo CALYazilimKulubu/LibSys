@@ -242,3 +242,7 @@ QComboBox {
 }
 
 QComboBox QAbstractItemView { color: white; selection-background-color: #212830; }
+
+QInputDialog {
+    color: white;
+}
