@@ -1,9 +1,10 @@
 {
-    "version": "2.0.2",
+    "version": "2.0.3",
     "installer_url": "https://github.com/herenturker/LibSys/releases/download/download/LibSysInstaller.exe" ,
     "libsys_url": "https://github.com/herenturker/LibSys/releases/download/download/LibSys.exe",
     "updater_url": "https://github.com/herenturker/LibSys/releases/download/download/LibSysUpdater.exe",
     "Change Log": [
-        "Added book id to filtered books window."
+        "Report Lost Book functionality works right.",
+        "ISBN and Book Title are not needed everytime for updating book info"
     ]
 }

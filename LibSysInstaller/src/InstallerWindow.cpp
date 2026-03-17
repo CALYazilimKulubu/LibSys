@@ -245,7 +245,7 @@ void InstallerWindow::startInstall(int selection)
     QJsonObject obj = doc.object();
 
     // --------------------- LOCAL VERSION ----------------------------------
-    QString currentRepoVersion = "2.0.2";
+    QString currentRepoVersion = "2.0.3";
     QString remoteRepoVersion = obj["version"].toString();
 
     if (isRemoteVersionNewer(currentRepoVersion, remoteRepoVersion))
